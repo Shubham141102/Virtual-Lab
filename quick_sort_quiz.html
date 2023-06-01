@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/footer/footer/footer.css">
+
+
+    <link rel="stylesheet" href="shell.css">
+    <link rel="stylesheet" href="quiz_l.css">
+    <style>
+        @media screen and (max-width:450px) {
+            .footer {
+                margin-top:50vh;
+            }
+
+            .section2 {
+                width: 90vw;
+            }
+
+            h1 {
+                font-size: larger;
+            }
+            .game-quiz-container{
+        width: 23rem;
+        height: 50rem;
+        margin-top: -2rem;
+    margin-left: -15rem;
+   
+        
+    }
+    .game-details-container{
+    width: 80%;
+    height: 5rem;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.game-details-container h1{
+    font-size: 1rem;
+}
+
+.game-options-container{
+    padding-top: 5px;
+}
+.game-options-container span{
+   margin-top: 10px;
+}
+.next-button-container button{
+    margin-top: 10px;
+}
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <!-- <h1>hello world</h1> -->
+            <div class="item0">
+                <div class="ig">
+                    <img src="i2it.png" alt="">
+                </div>
+                <div class="text">
+                    <a href="">VIRTUAL LAB</a>
+
+                </div>
+
+            </div>
+
+            <div class="item1"><a href="index.html">HOME</a></div>
+            <div class="item1"><a href="#about">TEAM</a></div>
+
+            <div class="item1"><a href="#contact">CONTACT</a></div>
+            <div class="item2"><a href="javascript:void(0);" class="icon" onclick="close1()">
+                    <i class="fa fa-bars"></i></a>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="responsive ">
+        <ul class="bye" onclick="bye()">
+            <button style="float: right"><b>X</b></button>
+            <li><a href="quick_sort_aim.html">Aim </a></li>
+            <li><a href="quick_sort_concept.html">Concept</a></li>
+            <li><a href="quick_sort_algo.html">Algorithm</a></li>
+            <li><a href="quick_sort_demo.html">Demo</a></li>
+            <li><a href="quick_sort_per.html">Performance</a></li>
+            <li><a href="quick_sort_app.html">Application</a></li>
+            <li><a href="quick_sort_quiz.html">Quiz</a></li>
+
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Computer Science and Engineering > <a href="index.html">Data Structures</a> > <a href="list.html">Semester-1
+                Experiments</a> > <a href="quick_sort_aim.html">Quick sort</a> > <a href="quick_sort_quiz.html">Quiz</a></h1>
+
+        <div class="aim2">
+            <div class="section1">
+                <ul>
+
+                    <li><a href="quick_sort_aim.html">Aim </a></li>
+                    <li><a href="quick_sort_concept.html">Concept</a></li>
+                    <li><a href="quick_sort_algo.html">Algorithm</a></li>
+                    <li><a href="quick_sort_demo.html">Demo</a></li>
+                    <li><a href="quick_sort_per.html">Performance</a></li>
+                    <li><a href="quick_sort_app.html">Application</a></li>
+                    <li><a href="quick_sort_quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+            <div class="section2">
+                <body onload="NextQuestion(0)">
+                    <main>
+                        <!-- creating a modal for when quiz ends -->
+                        <div class="modal-container" id="score-modal">
+                
+                            <div class="modal-content-container">
+                
+                                <h1>Congratulations, Quiz Completed.</h1>
+                
+                                <div class="grade-details">
+                                    <p>Attempts : 5</p>
+                                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                                    <p>Right Answers : <span id="right-answers"></span></p>
+                                    <p>Grade : <span id="grade-percentage"></span>%</p>
+                                    <p ><span id="remarks"></span></p>
+                                </div>
+                
+                                <div class="modal-button-container">
+                                    <button onclick="closeScoreModal()">Continue</button>
+                                </div>
+                
+                            </div>
+                        </div>
+                <!-- end of modal of quiz details-->
+                
+                        <div class="game-quiz-container">
+                
+                            <div class="game-details-container">
+                                <h1>Score : <span id="player-score"></span> / 5</h1>
+                                <h1> Question : <span id="question-number"></span> / 5</h1>
+                            </div>
+                
+                            <div class="game-question-container">
+                                <h1 id="display-question"></h1>
+                            </div>
+                
+                            <div class="game-options-container">
+                
+                               <div class="modal-container" id="option-modal">
+                
+                                    <div class="modal-content-container">
+                                         <h1>Please Pick An Option</h1>
+                
+                                         <div class="modal-button-container">
+                                            <button onclick="closeOptionModal()">Continue</button>
+                                        </div>
+                
+                                    </div>
+                
+                               </div>
+                
+                                <span>
+                                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                                    <label for="option-one" class="option" id="option-one-label"></label>
+                                </span>
+                
+                
+                                <span>
+                                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                                    <label for="option-two" class="option" id="option-two-label"></label>
+                                </span>
+                
+                
+                                <span>
+                                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                                    <label for="option-three" class="option" id="option-three-label"></label>
+                                </span>
+                
+                
+                                <span>
+                                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                                    <label for="option-four" class="option" id="option-four-label"></label>
+                                </span>
+                
+                
+                            </div>
+                
+                            <div class="next-button-container">
+                                <button onclick="handleNextQuestion()">Next Question</button>
+                            </div>
+                
+                        </div>
+                    </main>
+                    <script src="quick_sort_quiz.js"></script>
+                </body>
+               
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+
+            <div class="i2it">
+
+                <div class="logo">
+                    <div class="ig1">
+                        <img class="i2it_logo" src="i2it.png" alt="">
+                    </div>
+                </div>
+                <div class="add">
+                    <p class="pune1"><i class="fas fa-map-marker-alt pe-2"></i>P- 14 , Rajiv Gandhi Infotech Park, MIDC
+                        – Phase I,
+                        Hinjawadi, Pune – 411 057, Maharashtra, India</p>
+                    <p class="pune"><i class="fas fa-map-marker-alt pe-2"></i>Pune</p>
+                </div>
+            </div>
+            <div class="contact">
+
+                Contact Us
+                <div>
+
+                    <p class="number"><i class="fas fa-phone pe-2"></i> +91 7385576991 </p>
+                </div>
+
+
+                <p><i class="fas fa-envelope pe-2 mb-0"></i>info@isquareit.edu.in</p>
+
+            </div>
+            <div class="follow">
+                Follow Us <br>
+                <a href="https://www.facebook.com/I2ITPune/"><i class="fab fa-facebook-square"
+                        style="color: #80a7f4;"></i></a>
+                <i class="fab fa-instagram"></i>
+                <a href="https://www.youtube.com/c/I2ITPuneOfficial/videos"><i class="fab fa-youtube"
+                        style="color: red;"></i></a>
+                <a href="https://www.linkedin.com/company/i2it_2/?originalSubdomain=in"><i class="fab fa-linkedin-in"
+                        style="color: #698acc;"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="function.js"></script>
+</body>
+
+</html>
