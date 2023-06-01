@@ -26,8 +26,6 @@ function addnum()
     
     document.getElementById("index_dis").innerHTML = i;
     
-    
-alert("hii 1");
 }
 var it=1;
 
@@ -74,7 +72,7 @@ function generatebars(num) {
         bar.appendChild(barLabel);
         bar.appendChild(bararrow);
        
-        alert("hii 2");
+        
         // Append "div" to "data-container div"
         container.appendChild(bar);
         
@@ -87,7 +85,7 @@ async function ShellSort(delay = 600) {
     let bararrows = document.querySelectorAll(".bar__arrow");
     let arr_value=document.querySelectorAll(".bar__id");
     
-    alert("hii 3");
+   
 
     for (var i = a1; i > 0; i = Math.floor(i / 2)) {
 
@@ -104,7 +102,7 @@ async function ShellSort(delay = 600) {
             var gap=i;
             var temp = parseInt(
                 bars[j].childNodes[0].innerHTML);
-                alert("hii 4");  
+                
             var k;
             var temp1 = bars[j].style.height;
             var temp2 = bars[j].childNodes[0].innerText;
@@ -135,7 +133,7 @@ async function ShellSort(delay = 600) {
 
             // Provide darkblue color to the jth bar
             bars[j].style.backgroundColor = "darkblue";
-            alert("hii 5");
+           
             arele1=arr_value[j].innerText;
             
             bararrows[j].style.visibility="visible";
