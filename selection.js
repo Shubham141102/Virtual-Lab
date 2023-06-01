@@ -71,7 +71,7 @@ let arr_value=document.querySelectorAll(".bar__id");
 var min_idx = 0;
 for (var i = 0; i < bars.length; i += 1) {
 
-	// Assign i to min_idx
+	// Assign i to (min_idx)
 	min_idx = i;
 
 	// Provide darkblue color to the ith bar

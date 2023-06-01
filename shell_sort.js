@@ -20,7 +20,7 @@ function addnum()
     // let inputs=document.querySelectorAll('input');
 
     // btnclr.addEventListener('click',()=>{
-    //     inputs.forEach(input=>input.value='');
+    // inputs.forEach(input=>input.value='');
     // });
     
     
