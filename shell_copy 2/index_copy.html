@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head Section -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport"
+		content="width=device-width,
+		initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible"
+		content="ie=edge" />
+
+	<!-- title -->
+	<title>Shell Sort Visualizer using JavaScript</title>
+
+	<!-- linking style.css -->
+	<link href="style_copy.css" rel="stylesheet" />
+</head>
+
+<!-- Body Section -->
+
+<body>
+	<center><h2 style="justify-content: center ; color: rgb(17, 63, 201);">Shell Sort</h2></center>
+	<div class="partition"></div>
+	<marquee><b>Instructions</b>: 1) First enter the number of elements. 2) Enter numbers one by one by clicking on Add button 3) Click on Generate Graph button to generate graph. 4) Click on start sorting button to sort the numbers</marquee>
+	<br><br><button class="btnaddnum" onclick="window.location.reload()" style="font-size: 20px;" >Reset</button>
+	
+	
+	<section class="data-container"></section>
+	<section id="ele"></section>
+	
+	<div style="margin: auto; width: fit-content">
+		
+		<label>Enter number of Element:</label>
+	<input type="number"  id="arrnum"><br>
+<br>
+		<label>Enter Elements:</label>
+		<input type="number" id="text1" >
+	<button class="btnaddnum" onclick="addnum()"  >Add</button>
+	<p id="demo"></p>
+    <p id="index_dis"></p>
+
+		<!-- "Generate New Array" button -->
+		<button class="btnadd" onclick="generate()" id="Button1">
+			Generate Array
+		</button>
+
+		<!-- "Shell Sort" button -->
+		<button class="btnadd" onclick="ShellSort(),disable()"
+				id="Button2">Start Sorting</button>
+	</div>
+
+	<!-- linking script.js -->
+	
+	
+	<script src="script_copy.js"></script>
+</body>
+</html>

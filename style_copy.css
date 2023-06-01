@@ -1,0 +1,149 @@
+.mySlides {
+  display: none;
+}
+body {
+  background-color: whitesmoke;
+  font-family: Verdana, sans-serif;
+}
+.head {
+  margin-top: 20px;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  text-align: center;
+  font-size: 30px;
+  background-color: #6f459e;
+  color: white;
+  border-radius: 19px;
+  font-weight: bolder;
+ 
+}
+.data-container {
+  padding-top: 50px;
+  width: 500px;
+  height: 20px;
+  position: relative;
+  margin: 0 auto;
+ 
+}
+.bar {
+  width: 25px;
+  padding-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+  border-left: #0F1111;
+  left: 10;
+  bottom: 15;
+  background-color: rgb(17, 63, 201) ;
+  transition: 0.2s all ease;
+}
+.bar__id {
+  
+  
+  width: 100%;
+  text-align: center;
+ 
+
+}
+.btn1 {
+  padding: 12px;
+  font-weight: bolder;
+  background-color: #6f459e;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  border: white;
+  margin-top: 1vw;
+  margin-right: 1vw;
+}
+.btn2 {
+  padding: 12px;
+  font-weight: bolder;
+  background-color: #6f459e;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  border: white;
+}
+#ele {
+  text-align: center;
+  height: 200px;
+}
+
+
+
+
+/* 
+.btnadd1{
+  display: inline-block;
+outline: none;
+cursor: pointer;
+font-size: 14px;
+line-height: 1;
+border-radius: 500px;
+transition-property: background-color,border-color,color,box-shadow,filter;
+transition-duration: .3s;
+border: 1px solid transparent;
+letter-spacing: 2px;
+min-width: 160px;
+text-transform: uppercase;
+white-space: normal;
+font-weight: 700;
+text-align: center;
+padding: 17px 48px;
+color: #fff;
+background-color:#6f459e;
+ #1ed7b8; 
+height: 48px;
+font-family:monospace;
+
+#fd0;
+#FFD814;
+rgb(92, 214, 236);
+} */
+.btnaddnum{
+  display: inline-block;
+outline: 0;
+cursor: pointer;
+border-radius: 8px;
+box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+background:  rgb(92, 214, 236);
+color: white;
+border: 1px solid #000000;
+font-size: 14px;
+height: 26px;
+padding: 0 6px;
+text-align: center;
+font-weight: 500;
+color: #0F1111;
+}
+
+.btnadd{
+  display: inline-block;
+outline: 0;
+border: none;
+cursor: pointer;
+padding: 0 24px;
+
+border-radius: 50px;
+min-width: 200px;
+height: 50px;
+font-size: 18px;
+background-color:rgb(17, 63, 201);
+ font-style: initial;
+
+font-weight: 600;
+color:white;
+}
+.partition{
+  width: 100%;
+  height: 3px;
+  background-color: rgb(17, 63, 201);
+}
+
+
+
+
+
+
+
+

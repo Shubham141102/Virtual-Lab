@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sub-menu {
+  display: none;
+  list-style: none;
+}
+.sub-menu.active {
+  display: block;
+}
+.menu-back {
+  display: none;
+}
+.menu-back.active {
+  display: block;
+}
+.has_children:after {
+  content: "+";
+}
+.has_children.expanded:after {
+  content: "-";
+}
+
+.menu-back.active + .has_children {
+  display: none;
+}
+
+.bignav li a {
+    font-size: 3em;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    letter-spacing: -0.32px;
+}
+
+.list-col-no {
+  column-count: 2;
+}
+    </style>
+</head>
+<body>
+    <button class="menu-back">Back</button>
+      <ul class="bignav list-unstyled">
+        <li>
+          <a href="#" class="">Home</a>
+        </li>
+        <li>
+          <a href="#" class="has_children">Services</a>
+          <ul class="sub-menu">
+            <li><a href="">Service 1</a></li>
+            <li><a href="">Service 2</a></li>
+            <hr>
+            <li>
+              <a href="#" class="has_children">Clients</a>
+              <ul class="sub-menu">
+                <li><a href="">Something</a></li>
+                <li><a href="">Something 1</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="has_children">Contact</a>
+          <ul class="sub-menu list-col-no">
+            <li><a href="">London</a></li>
+            <li><a href="">America</a></li>
+            <li><a href="">UAE</a></li>
+            <li><a href="">China</a></li>
+          </ul>
+        </li>
+      </ul>
+</body>
+<script>
+    const buttonBack = document.querySelector(".menu-back");
+const hasChildren = document.querySelectorAll(".has_children");
+const allContent = document.querySelectorAll(".sub-menu");
+
+hasChildren.forEach((subMenu) => {
+  subMenu.addEventListener("click", function (event) {
+    const target = event.target;
+    const subMenuList = event.target.nextElementSibling;
+    event.preventDefault();
+    if (!subMenuList.classList.contains("active")) {
+      //allContent.forEach((item) => item.classList.remove("active")); //only allow one child open at a time (doesn't work with nested)
+      //hasChildren.forEach((elem) => elem.classList.remove("expanded"));
+      buttonBack.classList.remove("active");
+    }
+    target.classList.toggle("expanded");
+    subMenuList.classList.toggle("active");
+    buttonBack.classList.toggle("active");
+  });
+});
+buttonBack.addEventListener("click", () => {
+  allContent.forEach((elem) => elem.classList.remove("active"));
+  hasChildren.forEach((elem) => elem.classList.remove("expanded"));
+  buttonBack.classList.remove("active");
+});
+</script>
+</html>
