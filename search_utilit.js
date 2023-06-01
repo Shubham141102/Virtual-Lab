@@ -1,6 +1,7 @@
 const generateArrayBtn = document.getElementById("generate-array");
 const elementToSearch = document.getElementById("valueForSearch");
 const searchBtn = document.getElementById("search");
+const stepmsg = document.getElementById("caption");
 
 const linearSearchBtn = document.getElementById("linear-search");
 
@@ -21,11 +22,16 @@ function linearSearch(arr, value) {
   
       if (counter != 0) {
         // hiding arrow
-        arrowIcons[counter - 1].style.display = "none";
-      }
-  
-      if (counter == 10) {
+        arrowIcons[counter -1].style.display = "none";
+      } 
+      
+      var capt="Entered element = " +value+ " , " +value+" is compared with "+arr[counter];
+      document.getElementById("caption").innerHTML = capt;
+      if (counter == 9) {
+        document.getElementById("caption").innerHTML = "Element is not present";
+      
         alert("Element Not Found");
+
         location.reload();
         clearInterval(timer);
       } else {
@@ -35,18 +41,19 @@ function linearSearch(arr, value) {
           document.getElementById(box).style.backgroundColor = failureColor;
         }, 500);
       }
-  
+        
       if (arr[counter] === value) {
         clearInterval(innerTimer);
         // displaying arrow
         arrowIcons[counter].style.display = "block";
         document.getElementById(box).style.backgroundColor = successColor;
-        alert("Element Found At Index " + counter);
+        document.getElementById("caption").innerHTML = "Element is present";
+        alert("Element Found At Index " + (counter));
         location.reload();
         clearInterval(timer);
       }
       counter++;
-    }, 1000);
+    }, 2000);
   }
 // end linear 
 // generate random numbers first time
