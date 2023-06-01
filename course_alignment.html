@@ -15,8 +15,12 @@
 
   <link rel="stylesheet" href="/footer/footer/footer.css">
 
-  <link rel="stylesheet" href="css.css">
 
+ <link rel="stylesheet" href="css.css">
+ <style>
+
+ 
+ </style>
 </head>
 
 <body>
@@ -48,16 +52,16 @@
   <div class="responsive ">
     <ul class="bye" onclick="bye()">
       <button style="float: right"><b>X</b></button>
-      <li><a href="index.html" onclick="close2()">Introduction </a></li>
+      <li><a href="#intro">Introduction </a></li>
       <li><a href="objective.html">Objective</a></li>
-      <li><a href="">Outcome</a></li>
+      <li><a href="outcome.html"> Outcomes</a></li>
       <li><div class="dropdown">
         <span>List of experiments</span>
         <div class="dropdown-content">
           <a href="list.html">Semester 1</a>
           <a href="list1.html">Semester 2</a>
         </div></li>
-      <li><a href="target" onclick="close2()">Target Audience</a></li>
+      <li><a href="target">Target Audience</a></li>
       <li><a href="">Course Alignment</a></li>
       <li><a href="">Feedback</a></li>
 
@@ -72,7 +76,7 @@
 
           <li><a href="index.html">Introduction </a></li>
           <li><a href="objective.html">Objective</a></li>
-          <li><a href="">Outcomes</a></li>
+          <li><a href="outcome.html">Outcomes</a></li>
           <li>
             <div class="dropdown">
               <span>List of experiments</span>
@@ -82,28 +86,23 @@
               </div>
           </li>
           <li><a href="target_audience.html">Target Audience</a></li>
-          <li><a href="course_alignment.html">Course Alignment</a></li>
+          <li><a href="">Course Alignment</a></li>
           <li><a href="">Feedback</a></li>
         </ul>
       </div>
       <div class="section2">
-        
         <div id="intro" class="intro">
-            <h2>Outcomes</h2><br>
-           <p style="text-align: justify; text-justify: inter-word;">
-            <li style="font-weight: lighter;">To demonstrate a detailed understanding of behaviour of data structures like array, linked
-              list, stack, and queue by developing programs
-                problems.</li>
-                <li style="font-weight: lighter;">To summarize data searching and sorting techniques.
-
+          <h2>Data Structures</h2><br><br>
+          <p style="text-align: justify; text-justify: inter-word;" >
+            <ol type="1">
+                <li>
+                    The present lab is aligned with courses such as Introduction to Data Structures, Data Structures in C/C++, and the like. The experiments touch on most topics covered in such courses in most curricula.
                 </li>
-                <li style="font-weight: lighter;"> To analyze and use effective and efficient data structures in solving various Computer
-                  Engineering domain problems
-                   </li>
-            
-           </p>
-  
-          </div>
+            </ol>
+          </p>
+
+        </div>
+        
       </div>
     </div>
   </div>
@@ -146,8 +145,7 @@
   </footer>
 
 
-
- <script src="function.js"></script>
+<script src="function.js"></script>
 </body>
 
 </html>
