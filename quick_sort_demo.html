@@ -17,6 +17,44 @@
 
 
  <link rel="stylesheet" href="shell.css">
+ <style>
+   .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+     z-index: 2 ;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: #0d0d0d;
+      font-size: 22px;
+      text-decoration: none;
+      padding: 5px 10px;
+      width: 170px;
+      z-index: 2;
+    }
+
+    .dropdown-content a:hover {
+      color: #0d0d13;
+      background-color: #ddd;
+      border-radius: 5px;
+      z-index: 2;
+    }
+ </style>
 </head>
 
 <body>
@@ -51,7 +89,18 @@
       <li><a href="quick_sort_aim.html">Aim </a></li>
       <li><a href="quick_sort_concept.html">Concept</a></li>
       <li><a href="quick_sort_algo.html">Algorithm</a></li>
-      <li><a href="quick_sort_demo.html">Demo</a></li>
+      <li><a href="quick_sort_demo.html">
+
+        <li>
+
+          <div class="dropdown">
+            <span>Demo</span>
+            <div class="dropdown-content">
+              <a href="quick_sort_demo.html">Partition in Quick Sort</a>
+              <a href="quick_sort_2.html">Quick Sort</a>
+            </div>
+        </li>
+      </a></li>
       <li><a href="quick_sort_per.html">Performance</a></li>
       <li><a href="quick_sort_app.html">Application</a></li>
       <li><a href="quick_sort_quiz.html">Quiz</a></li>
@@ -69,7 +118,19 @@
             <li><a href="quick_sort_aim.html">Aim </a></li>
             <li><a href="quick_sort_concept.html">Concept</a></li>
             <li><a href="quick_sort_algo.html">Algorithm</a></li>
-            <li><a href="quick_sort_demo.html">Demo</a></li>
+            <li><a href="quick_sort_demo.html">
+
+              <li>
+
+                <div class="dropdown">
+                  <span>Demo</span>
+                  <div class="dropdown-content">
+                    <a href="quick_sort_demo.html">Partition in Quick Sort </a>
+                    <a href="quick_sort_2.html">Quick Sort</a>
+                  </div>
+              </li>
+
+            </a></li>
             <li><a href="quick_sort_per.html">Performance</a></li>
             <li><a href="quick_sort_app.html">Application</a></li>
             <li><a href="quick_sort_quiz.html">Quiz</a></li>
@@ -77,7 +138,7 @@
       </div>
       <div class="section2">
         <div id="intro" class="intro">
-          <h2>Demo</h2>
+          <h2>Partition in Quick Sort </h2>
           <iframe src="./quick try/quick try/index.html" frameborder="0" width="800 " height="600" style="padding-left: 100px;"></iframe>
           
 

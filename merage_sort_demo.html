@@ -17,8 +17,44 @@
 
 
  <link rel="stylesheet" href="shell.css">
- 
- 
+ <style>
+   .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+     z-index: 2 ;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: #0d0d0d;
+      font-size: 22px;
+      text-decoration: none;
+      padding: 5px 10px;
+      width: 170px;
+      z-index: 2;
+    }
+
+    .dropdown-content a:hover {
+      color: #0d0d13;
+      background-color: #ddd;
+      border-radius: 5px;
+      z-index: 2;
+    }
+ </style>
 </head>
 
 <body>
@@ -39,7 +75,7 @@
       <div class="item1"><a href="index.html">HOME</a></div>
       <div class="item1"><a href="#about">TEAM</a></div>
 
-      <div class="item1"><a href="contact_us.html">CONTACT</a></div>
+      <div class="item1"><a href="#contact">CONTACT</a></div>
       <div class="item2"><a href="javascript:void(0);" class="icon" onclick="close1()">
           <i class="fa fa-bars"></i></a>
       </div>
@@ -50,38 +86,40 @@
   <div class="responsive ">
     <ul class="bye" onclick="bye()">
       <button style="float: right"><b>X</b></button>
-      <li><a href="queue_aim.html">Aim </a></li>
-      <li><a href="queue_concept.html">Concept</a></li>
-      <li><a href="queue_algo.html">Algorithm</a></li>
-      <li><a href="queue_demo.html">Demo</a></li>
-      <li><a href="queue_per.html">Performance</a></li>
-      <li><a href="queue_app.html">Application</a></li>
-      <li><a href="queue_quiz.html">Quiz</a></li>
+      <li><a href="merage_sort.html">Aim </a></li>
+      <li><a href="merage_sort_concept.html">Concept</a></li>
+      <li><a href="merage_sort_algo.html">Algorithm</a></li>
+      <li><a href="merage_sort_demo.html">Demo</a></li>
+      <li><a href="merage_sort_per.html">Performance</a></li>
+      <li><a href="merage_sort_app.html">Application</a></li>
+      <li><a href="merage_sort_quiz.html">Quiz</a></li>
 
+      
     </ul>
   </div>
   <div class="main">
     <h1>Computer Science and Engineering > <a href="index.html">Data Structures</a> > <a
-        href="list.html">Semester-1 Experiments</a> > <a href="queue_aim.html">Simple Queue</a> > <a href="queue_demo.html">demo</a> </h1>
+        href="list.html">Semester-1 Experiments</a> > <a href="merage_sort_aim.html">Merage sort</a> > <a href="merage_sort_demo.html">demo</a> </h1>
 
     <div class="aim2">
       <div class="section1">
         <ul>
+            <li><a href="merage_sort.html">Aim </a></li>
+      <li><a href="merage_sort_concept.html">Concept</a></li>
+      <li><a href="merage_sort_algo.html">Algorithm</a></li>
+      <li><a href="merage_sort_demo.html">Demo</a></li>
+      <li><a href="merage_sort_per.html">Performance</a></li>
+      <li><a href="merage_sort_app.html">Application</a></li>
+      <li><a href="merage_sort_quiz.html">Quiz</a></li>
 
-            <li><a href="queue_aim.html">Aim </a></li>
-            <li><a href="queue_concept.html">Concept</a></li>
-            <li><a href="queue_algo.html">Algorithm</a></li>
-            <li><a href="queue_demo.html">Demo
-            </a></li>
-            <li><a href="queue_per.html">Performance</a></li>
-            <li><a href="queue_app.html">Application</a></li>
-            <li><a href="queue_quiz.html">Quiz</a></li>
+
+            
         </ul>
       </div>
       <div class="section2">
         <div id="intro" class="intro">
          
-          <iframe src="./Queue files(new)/queueindex.html" frameBorder="0" width="1000 " height="400" scrolling="no" ></iframe>
+          <iframe src="./merge sort/m.html" frameborder="0" width="800 " height="600" style="padding-left: 100px;"></iframe>
           
 
         </div>
