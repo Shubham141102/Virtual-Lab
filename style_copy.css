@@ -14,9 +14,20 @@ body {
   background-color: #6f459e;
   color: white;
   border-radius: 19px;
-  font-weight: bolder;
- 
+  font-weight: bolder; 
 }
+
+.bar__arrow {
+  position: absolute;
+  bottom: -30px;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  /* visibility: hidden; */
+  
+  background-image: url("up-arrow-25.png");
+}
+
 .data-container {
   padding-top: 50px;
   width: 500px;
@@ -37,12 +48,11 @@ body {
   transition: 0.2s all ease;
 }
 .bar__id {
-  
-  
+  position: absolute;
+  top: 7px;
   width: 100%;
   text-align: center;
- 
-
+  color: white;
 }
 .btn1 {
   padding: 12px;

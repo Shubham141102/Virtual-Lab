@@ -5,7 +5,7 @@ const searchBtn = document.getElementById("search");
 const binarySearchBtn = document.getElementById("binary-search");
 
 const arrowIcons = document.getElementsByClassName("box-item-icon");
-
+var iter=0;
 // colors
 const successColor = "#32E0C4";
 const failureColor = "#FB3640";
@@ -30,8 +30,11 @@ function binarySearch(arr, x, start, end) {
     arrowIcons[mid].style.display = "block";
     const timer = setTimeout(() => {
       document.getElementById(box).style.backgroundColor = failureColor;
-    }, 500);
-  
+    }, 3000);
+    
+ iter+=1;
+    step_msg="Iteration :  "+iter+" <br> Here, mid=(beg+end)/2=("+start+"+"+end+")/2="+mid;
+    document.getElementById("caption").innerHTML =step_msg;
     // Compare mid with given key x
     if (arr[mid] === x) {
       document.getElementById(box).style.backgroundColor = successColor;
@@ -44,19 +47,24 @@ function binarySearch(arr, x, start, end) {
     // If element at mid is greater than x,
     if (arr[mid] > x) {
       // search in the left half of mid
+      step_msg2="arr[mid] > X i.e "+arr[mid]+" > "+x+"<br>Therefore search in left half of mid";
+      document.getElementById("caption2").innerHTML =step_msg2;
       setTimeout(() => {
         // hiding arrow
         arrowIcons[previousMid].style.display = "none";
         return binarySearch(arr, x, start, mid - 1);
-      }, 2000);
+      }, 3000);
     } else {
+      step_msg2="arr[mid] < X i.e "+arr[mid]+" < "+x+"<br>Therefore search in right half of mid";
+      document.getElementById("caption2").innerHTML =step_msg2;
+      
       // If element at mid is smaller than x,
       // search in the right half of mid
       setTimeout(() => {
         // hiding arrow
         arrowIcons[previousMid].style.display = "none";
         return binarySearch(arr, x, mid + 1, end);
-      }, 2000);
+      }, 3000);
     }
   }
 /// binary end 
@@ -65,7 +73,7 @@ function binarySearch(arr, x, start, end) {
 function generateArray() {
     let value;
     const resultArray = [];
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i <= 9; i++) {
       value = Math.floor(Math.random() * 99);
       resultArray.push(value);
     }
@@ -93,7 +101,7 @@ function generateArray() {
       }
     } */
     
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i <= 9; i++) {
     let box = `box${i}`;
     document.getElementById(box).innerHTML = randomSortedArray[i];
   }
