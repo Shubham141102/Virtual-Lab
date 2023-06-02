@@ -38,18 +38,23 @@ for (let i = 0; i < num; i += 1) {
 	
 	// To create element "label"
 	const barLabelS = document.createElement("label");
+	const bararrow = document.createElement("arrow");
+        
 
 	// To add class "bar_id" to "label"
 	barLabelS.classList.add("bar_id");
+	bararrow.classList.add("bar__arrow");
 
 	// Assign value to "label"
 	barLabelS.innerHTML = value;
+	bararrow.style.visibility="hidden";
 	barLabelS.style.color="color";
 	barLabelS.style.paddingTop="-20px";
 	
 	
 	// Append "Label" to "div"
 	bar.appendChild(barLabelS);
+	bar.appendChild(bararrow);
 
 	// Append "div" to "data-container div"
 	container.appendChild(bar);
@@ -59,11 +64,14 @@ for (let i = 0; i < num; i += 1) {
 // asynchronous function to perform "Selection Sort"
 async function SelectionSort(delay = 300) {
 let bars = document.querySelectorAll(".bar");
+let bararrows = document.querySelectorAll(".bar__arrow");
+let arr_value=document.querySelectorAll(".bar__id");
+
 // Assign 0 to min_idx
 var min_idx = 0;
 for (var i = 0; i < bars.length; i += 1) {
 
-	// Assign i to min_idx
+	// Assign i to (min_idx)
 	min_idx = i;
 
 	// Provide darkblue color to the ith bar
