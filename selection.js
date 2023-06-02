@@ -2,6 +2,8 @@ const container = document.querySelector(".data-container");
 const arr1=[];
 var a1;
 var i=0;
+var step_msg=document.getElementById("demo3");
+var ele=1;
 
 function addnum()
 {
@@ -76,6 +78,7 @@ for (var i = 0; i < bars.length; i += 1) {
 
 	// Provide darkblue color to the ith bar
 	bars[i].style.backgroundColor = "darkblue";
+	bararrows[i].style.visibility="visible";
 	for (var j = i + 1; j < bars.length; j += 1) {
 
 	// Provide red color to the jth bar
@@ -86,7 +89,7 @@ for (var i = 0; i < bars.length; i += 1) {
 	await new Promise((resolve) =>
 		setTimeout(() => {
 		resolve();
-		}, 1000)
+		}, 2000)
 	);
 
 	// To store the integer value of jth bar to var1
@@ -101,12 +104,15 @@ for (var i = 0; i < bars.length; i += 1) {
 
 		// Provide skyblue color to the (min-idx)th bar
 		bars[min_idx].style.backgroundColor = " rgb(24, 190, 255)";
+		bararrows[min_idx].style.visibility="hidden";
 		}
 		min_idx = j;
 	} else {
 
 		// Provide skyblue color to the jth bar
 		bars[j].style.backgroundColor = " rgb(24, 190, 255)";
+		bararrows[j].style.visibility="hidden";
+
 	}
 	}
 
@@ -122,7 +128,7 @@ for (var i = 0; i < bars.length; i += 1) {
 	await new Promise((resolve) =>
 	setTimeout(() => {
 		resolve();
-	}, 1000)
+	}, 2000)
 	);
 
 	// Provide skyblue color to the (min-idx)th bar
@@ -130,6 +136,11 @@ for (var i = 0; i < bars.length; i += 1) {
 
 	// Provide lightgreen color to the ith bar
 	bars[i].style.backgroundColor = " rgb(131, 26, 196)";
+	bararrows[i].style.visibility="hidden";
+	
+	// step_msg="Now "+arr_value[i]+ " is sorted";
+	document.getElementById("demo3").innerHTML ="Now "+ele+ " element is sorted";
+	ele+=1;
 }
 
 // To enable the button "Generate New Array" after final(sorted)
