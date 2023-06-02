@@ -79,6 +79,7 @@ for (var i = 0; i < bars.length; i += 1) {
 	// Provide darkblue color to the ith bar
 	bars[i].style.backgroundColor = "darkblue";
 	bararrows[i].style.visibility="visible";
+	
 	for (var j = i + 1; j < bars.length; j += 1) {
 
 	// Provide red color to the jth bar
@@ -139,7 +140,8 @@ for (var i = 0; i < bars.length; i += 1) {
 	bararrows[i].style.visibility="hidden";
 	
 	// step_msg="Now "+arr_value[i]+ " is sorted";
-	document.getElementById("demo3").innerHTML ="Now "+ele+ " element is sorted";
+	
+	document.getElementById("demo3").innerHTML ="Iteration:"+ele+"<br>Now "+ele+ " smallest element is sorted";
 	ele+=1;
 }
 
