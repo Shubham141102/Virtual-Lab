@@ -73,7 +73,7 @@ function binarySearch(arr, x, start, end) {
 function generateArray() {
     let value;
     const resultArray = [];
-    for (let i = 0; i <= 9; i++) {
+    for (let i = 0; i < 9; i++) {
       value = Math.floor(Math.random() * 99);
       resultArray.push(value);
     }
@@ -101,7 +101,7 @@ function generateArray() {
       }
     } */
     
-  for (let i = 0; i <= 9; i++) {
+  for (let i = 0; i < 9; i++) {
     let box = `box${i}`;
     document.getElementById(box).innerHTML = randomSortedArray[i];
   }
