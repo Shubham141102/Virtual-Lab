@@ -1,8 +1,31 @@
 /************* main body section *************/
+@media screen and (max-width:450px){
+  .main-wrapper {
+    width: 100%;
+    height: 50vh;
+    
+    
+  }
 
-.main-wrapper {
+  
+}
+
+@media screen and (min-width:450px) {
+  .main-wrapper {
     width: 95%;
+<<<<<<< HEAD
     height: 60vh;
+=======
+    height: 50vh;
+    
+  }
+
+
+  
+}
+.main-wrapper {
+   
+>>>>>>> 853b7689ff5945fcb28b3b0a34c5286226db2ad0
     position: relative;
     margin: auto;
     top: 0;
