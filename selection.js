@@ -42,7 +42,7 @@ for (let i = 0; i < num; i += 1) {
         
 
 	// To add class "bar_id" to "label"
-	barLabelS.classList.add("bar_id");
+	barLabelS.classList.add("bar__id");
 	bararrow.classList.add("bar__arrow");
 
 	// Assign value to "label"
@@ -80,6 +80,7 @@ for (var i = 0; i < bars.length; i += 1) {
 
 	// Provide red color to the jth bar
 	bars[j].style.backgroundColor = "red";
+	bararrows[j].style.visibility="visible";
 		
 	// To pause the execution of code for 300 milliseconds
 	await new Promise((resolve) =>
